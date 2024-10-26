@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.guivic.appconversor.MainController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="400.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: grey;" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label fx:id="instructions" layoutX="13.0" layoutY="24.0" prefHeight="56.0" prefWidth="270.0" text="Haz que se guarde estos campos en el panel de la derecha" wrapText="true">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameSurname" layoutX="14.0" layoutY="70.0" prefHeight="56.0" prefWidth="232.0" text="Nombre y apellidos">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameField" layoutX="14.0" layoutY="126.0" />
+                  <Label fx:id="mobile" layoutX="8.0" layoutY="167.0" prefHeight="32.0" prefWidth="232.0" text="Teléfono">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mobileField" layoutX="14.0" layoutY="209.0" />
+                  <DatePicker fx:id="datePicker" layoutX="14.0" layoutY="253.0" prefHeight="25.0" prefWidth="149.0" />
+                  <CheckBox fx:id="chkAbroad" layoutX="14.0" layoutY="329.0" mnemonicParsing="false" onAction="#selectAbroad" prefHeight="25.0" prefWidth="149.0" text="Extranjero">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="chkSpain" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#selectSpain" prefHeight="25.0" prefWidth="149.0" text="España">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </CheckBox>
+                  <Button fx:id="show" layoutX="188.0" layoutY="329.0" mnemonicParsing="false" onAction="#processData" style="-fx-border-style: solid;" text="Mostrar">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="328.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <VBox fx:id="vBox" alignment="CENTER" layoutX="-1.0" layoutY="7.0" prefHeight="391.0" prefWidth="296.0" />
+                  <Label fx:id="resoult" layoutX="24.0" layoutY="24.0" prefHeight="56.0" prefWidth="232.0" text="Estos son los datos introducidos">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameResoult" layoutX="24.0" layoutY="80.0" prefHeight="56.0" prefWidth="232.0" text="Nombre y apellidos">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userName" layoutX="24.0" layoutY="136.0" prefHeight="26.0" prefWidth="166.0" textFill="#7392c4" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mobileResoult" layoutX="24.0" layoutY="177.0" prefHeight="32.0" prefWidth="232.0" text="Teléfono">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userMobile" layoutX="24.0" layoutY="218.0" prefHeight="26.0" prefWidth="232.0" textFill="#7392c4" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dateResoult" layoutX="24.0" layoutY="258.0" prefHeight="32.0" prefWidth="232.0" text="Día escogido">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userDate" layoutX="24.0" layoutY="290.0" prefHeight="26.0" prefWidth="232.0" textFill="#7392c4" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="origin" layoutX="24.0" layoutY="325.0" prefHeight="32.0" prefWidth="232.0" text="Procedencia">
+                     <font>
+                        <Font name="Gabriola" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userOrigin" layoutX="24.0" layoutY="357.0" prefHeight="26.0" prefWidth="232.0" textFill="#7392c4" wrapText="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
